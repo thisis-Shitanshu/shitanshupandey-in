@@ -19,7 +19,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 img, embed, object, video {
@@ -122,6 +122,7 @@ main {
 		background-color: #E3E3E3;
 		padding: 5px 20px;
 		border-radius: 2px;
+		border: 1px solid #222222;
 		@media screen and (max-width: $mobileW){
 			margin-top: 5px;
 		}
