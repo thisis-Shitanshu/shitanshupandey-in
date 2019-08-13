@@ -2,6 +2,7 @@
 layout: post
 title: "TypeScript"
 categories: TypeScript
+published: true
 ---
 A cheatsheet on TypeScript.
 Find additional TypeScript configuration Gists, [here.](https://gist.github.com/thisis-Shitanshu/4159f38d651861540ba52077772fa12c)

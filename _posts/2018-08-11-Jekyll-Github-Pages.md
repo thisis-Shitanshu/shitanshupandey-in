@@ -2,6 +2,7 @@
 layout: post
 title: "GitHub - Pages generated with Jekyll"
 categories: GitHub Jekyll
+published: true
 ---
 Creating and Hosting a Jekyll website on GitHub Pages.
 

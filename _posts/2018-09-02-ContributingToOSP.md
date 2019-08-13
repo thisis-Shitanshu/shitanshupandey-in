@@ -2,6 +2,7 @@
 layout: post
 title: "Contributing to Open Source Project"
 categories: OpenSource GitHub
+published: true
 ---
 
 When starting to contribute to any project always look for CONTRIBUTING.md file. (If not present, you can submit an issue for it. So that contributing to that project becomes convenient.)
