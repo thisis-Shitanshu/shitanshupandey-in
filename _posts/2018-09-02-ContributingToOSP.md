@@ -10,6 +10,13 @@ When starting to contribute to any project always look for CONTRIBUTING.md file.
 ## #Steps
 1. Fork the Repository.
 1. Clone the Forked Repo locally.
+    - When working with branchs
+    ```
+    $ git clone git://example.com/myproject
+    $ cd myproject
+    $ git branch -a
+    $ git checkout origin/branch
+    ```
 1. To keep your copy of repository up to date with the original repository (Upstream repository):
     - add `git remote`, so we can easily fetch and pull from the original copy of repository.
     ```
@@ -18,6 +25,10 @@ When starting to contribute to any project always look for CONTRIBUTING.md file.
     - To get information about upstream/ remote.
     ```
     $ git fetch upstream
+    ```
+    - Merge the changes from upstream/master into your local branch.
+    ```
+    $ git merge upstream/master
     ```
     - You should have your local copy of master pointing to upstream/master, so whenever you pull changes from the master you will get the latest changes from upstream.
     ```
