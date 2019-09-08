@@ -1,97 +1,14 @@
 ---
 layout: post
-title: "TypeScript"
-categories: TypeScript
+title: "TypeScript: Part 2"
+categories: TypeScript VariableDeclaration
 published: true
 ---
 A cheatsheet on TypeScript.
 Find additional TypeScript configuration Gists, [here.](https://gist.github.com/thisis-Shitanshu/4159f38d651861540ba52077772fa12c)
 
-# #Type System
-Type systems increase code quality, readability and make it easier to maintain and refactor the codebase.
-- Errors can be caught at compile time rather than at the run time.
-- A compiler error typically tells you exactly where something went wrong and what exactly went wrong whereas a runtime error is accompanied by a stack trace that may be misleading and results on a significant amount of time spent on debug work.
-- To initiate TS in a project:
-```
-$ tsc --init
-```
+# #Variable Declaration
 
-# #Types
-- Boolean
-```typescript
-const isLoading: boolean = false;
-```
-
-- Number
-```typescript
-const decimal: number = 8;
-const binary: number = 0b110;
-```
-
-- String
-```typescript
-const fruit: string = "orange";
-```
-
-- Array
-    - Most common
-    ```typescript
-    let firstFivePrimes: number[] = [2, 3, 5, 7, 11];
-    ```
-    - Less common. Uses generic types
-    ```typescript
-    let firstFivePrimes2: Array<number> = [2, 3, 5, 7, 11];
-    ```
-
-- Tuple
-    - It allow you to express an organised array where the type of a fixed number of elements is known.
-```typescript
- let contact: [string, number] = ['John', 954683];
- contact = ['Ana', 842903, 'extra argument'] /* Error! Type '[string, number, string]' is not assignable to type '[string, number]'. */
-```
-
-- Any
-    - It gives you the power to opt-out of type checking.
-```typescript
-let variable: any = 'a string';
-variable = 5;
-variable = false;
-variable.someRandomMethod(); /* Okay, someRandomMethod might exist at runtime. */
-```
-
-- Void
-    - It is the absence of having any type at all.
-    - It is commonly used as the return type of function that do not return a value.
-```typescript
-function sayMyName(name: string): void {
-    console.log(name);
-}
-sayMyName('Heisenberg');
-```
-
-- Never
-    - The `never` type represents the type of values that never occur. 
-    - For instance, `never` is the return type of a function which will always throw an exception or not reach its end point.
-
-    ```typescript
-    // throws an exception
-    function error(message: string): never {
-        throw new Error(message);
-    }
-
-    // unreachable end point
-    function continuousProcess(): never {
-        while(true) {
-            // ...
-        }
-    }
-    ```
-
-- Null and Undefined
-    - They're not extremely useful on their own but they become useful when used within union types.
-```typescript
-type someProp = string | null | undefined;
-```
 
 - Unknown **(Introduced in 3.0)**
     - It is the type-safe counterpart of **any**.
@@ -209,40 +126,6 @@ class Clock implements IClock {
     constructor(h: number, m: number) { }
 }
 ```
-
-
-# #Enums
-An **enum** is a way to organize a collection of related values that can be numeric or string values.
-```typescript
-enum CardSuit {
-    Clubs,
-    Diamonds,
-    Hearts,
-    Spades
-}
-
-let card = CardSuit.Clubs;
-
-carf = "not a card suit"; /* Error! Type '"not a card suit"' is not assignable to type 'CardSuit'. */
-```
-
-Alternatively enums can be initialised with string values which is a more readable approach.
-```typescript
-enum SocialMedia {
-    Facebook = 'FACEBOOK',
-    Twitter = 'TWITTER',
-    Instagram = 'INSTAGRAM',
-    LinkedIn = 'LINKEDIN'
-}
-```
-
-- Reverse Mapping
-    - We can access the value of a member and also a member name from its value.
-```typescript
- const clubsAsNumber: number = CardSuit.Clubs; // 0
- const clubsAsString: string = CardSuit[0]; // Clubs
-```
-
 
 # #Functions
 ```typescript
