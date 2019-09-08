@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TypeScript: Part 2"
+title: "TypeScript: Part II"
 categories: TypeScript VariableDeclaration
 published: true
 ---

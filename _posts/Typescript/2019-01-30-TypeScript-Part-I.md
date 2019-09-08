@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TypeScript: Part 1"
+title: "TypeScript: Part I"
 categories: TypeScript TypeSystem BasicTypes
 published: true
 ---
