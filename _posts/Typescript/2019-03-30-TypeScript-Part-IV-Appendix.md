@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "TypeScript: Appendix"
-categories: TypeScript Appendix
+title: "TypeScript: Part IV"
+categories: TypeScript 3.0 TypeAssertion TypeCompatibility TypeGuard LiteralTypes ConditionalTypes GenericTypes MappedTypes
 published: true
 ---
 
-# #Outsiders
+@v3.0.0
 
+## #Types
 - Unknown **(Introduced in 3.0)**
     - It is the type-safe counterpart of **any**.
     - Anything is assignable to **unknown**, but **unknown** isn't assignable to anything but itself and **any**.
