@@ -149,6 +149,9 @@ Notes on JavaScript
 - Destructuring Assignment to Assign Variables from Objects:
     - `const { x: { x1: a1 }, y: b, z: c } = voxel;`
 
+- Converting Object to Array:
+    - `Object.keys(testObject)`
+
 - **Concise Declarative Function in an Object:**
     ```javascript
     const bicycle = {
@@ -223,3 +226,38 @@ Notes on JavaScript
 
 - Create an export fallback with export deafult:
     - `export deafult function name() { return 4;}`
+
+# #Local Storage and Session Storage
+- window object in the browser has both localStorage and sessionStorage.
+    - localStorage persists untill we clear it out.
+        - `window.localStorage.setItem('myItem', JSON.stringify({ name: 'Shitanshu' }))`
+            - Store Strings only in key value pair.
+        - `const myRetrievedObject = window.localStorage.getItem('myItem')`
+        - `JSON.parse(myRetrievedObject)`
+    - sessionStorage persists until the tab currently is not closed.
+
+# #Falsy Value in JavaScript
+- 0
+- false
+- undefined
+- null
+- NaN
+- ""
+
+# #Curry Functions
+- Closures are used to build curry functions.
+
+```js
+let add = function(a) {
+    return function(b) {
+        return a + b;
+    }
+};
+
+let addToFive = add(5);
+
+addToFive(1); //6
+```
+
+# #Data Normalization
+- Concept of storing lists of elements inside of an object instead of an array is called Data Normalization.
