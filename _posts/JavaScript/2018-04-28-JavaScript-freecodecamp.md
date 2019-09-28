@@ -261,3 +261,34 @@ addToFive(1); //6
 
 # #Data Normalization
 - Concept of storing lists of elements inside of an object instead of an array is called Data Normalization.
+
+# #Generator Function
+- Native to JS, function that resembles async-await.
+    - Async-Await is built on top of generator function.
+- They pause the execution of the function when they see a specific key, "yield".
+
+```js
+function* gen() {
+    console.log('a');
+    console.log('b');
+}
+
+const g = gen();    // Return generator object.
+g.next();           // Execution. Return value: undefined, done: true.
+```
+- Using Yield:
+
+```js
+function* gen(i) {
+    yield i;
+    yield i + 10;
+    return 25
+}
+
+const g = gen(5);
+const gObj = g.next();
+gObj // { value: 5, done: false }
+const jObj = g.next();
+jObj // { value: 15, done: false }
+g.next() // { value: 25, done: true }
+```
