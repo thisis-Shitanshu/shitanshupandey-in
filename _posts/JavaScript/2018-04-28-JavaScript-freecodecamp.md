@@ -292,3 +292,12 @@ const jObj = g.next();
 jObj // { value: 15, done: false }
 g.next() // { value: 25, done: true }
 ```
+
+# #Set Collection:
+- It is collection object, similar to an array but only adds an item to the list if its unique.
+    - If we add the same function, object and the reference already exists than it won't add it.
+
+```js
+const function = new Set();
+function.add(name);
+```
